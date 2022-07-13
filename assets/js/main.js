@@ -1,3 +1,12 @@
+//  @@@@@@@@@@@@@@@@@@ PRELOADER @@@@@@@@@@@@@@@@@@
+onload = () => {
+  const preloader = document.getElementById('preloader');
+
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 3000);
+};
+
 // @@@@@@@@@@@@@@@ show & remove menu @@@@@@@@@@@@@@@@@
 
 const navMenu = document.getElementById('nav-menu'),
@@ -21,12 +30,13 @@ navLinks.forEach((n) => {
   });
 });
 
-// @@@@@@@@@@@@  add header boxshadow @@@@@@@@@@@@
+// @@@@@@@@@@@@  change header background @@@@@@@@@@@@
+
 const header = document.getElementById('header');
 window.addEventListener('scroll', scrollHeader);
 
 function scrollHeader() {
-  if (this.scrollY >= 100) {
+  if (this.scrollY >= 50) {
     header.classList.add('scroll-header');
   } else {
     header.classList.remove('scroll-header');
@@ -34,6 +44,7 @@ function scrollHeader() {
 }
 
 // @@@@@@@@@@@@ show scroll up @@@@@@@@@@@@
+
 window.addEventListener('scroll', scrollUp);
 
 function scrollUp() {
