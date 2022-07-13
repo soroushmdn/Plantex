@@ -16,8 +16,8 @@
   --h2-font-size: 2.2rem;
   --h3-font-size: 1.3rem;
   --normal-font-size: 1rem;
-  --small-font-size: 0.8rem;
-  --tiny-font-size: 0.65rem;
+  --small-font-size: 0.85rem;
+  --tiny-font-size: 0.75rem;
 
   --font-regular: 400;
   --font-medium: 500;
@@ -37,11 +37,12 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.1rem;
     --normal-font-size: 0.9rem;
-    --small-font-size: 0.7rem;
+    --small-font-size: 0.75rem;
   }
 }
 
 /* @@@@@@@@@@@@@@@@@ base @@@@@@@@@@@@@@@@ */
+
 *,
 ::after,
 ::before {
@@ -53,24 +54,21 @@
   list-style: none;
 }
 
-body,
-input,
-button,
-textarea {
+body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-}
-
-body {
   background-color: var(--body-color);
   color: var(--text-color);
+}
+
+main {
+  overflow: hidden;
 }
 
 h1,
 h2,
 h3 {
   color: var(--title-color);
-  /* font-weight: var(--font-700); */
 }
 
 img {
@@ -78,25 +76,35 @@ img {
   height: auto;
 }
 
+input,
+button,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 /* @@@@@@@@@@@@@@@@@ reusable CSS Classes @@@@@@@@@@@@@@@@ */
-main {
-  overflow: hidden;
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: calc(100% - 3rem);
 }
 
 .section {
-  padding: 7rem 0 2rem;
+  padding: 5rem 0 2rem;
 }
 
 .section-title {
   text-align: center;
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2-5);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: calc(100% - 3rem);
 }
 
 .btn {
@@ -110,7 +118,6 @@ main {
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
   border: none;
-  cursor: pointer;
   transition: 0.4s;
 }
 
@@ -140,7 +147,7 @@ main {
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: transparent;
   transition: 0.4s;
 }
 
@@ -172,12 +179,13 @@ main {
 
 .nav__list {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .nav__link {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  font-size: 0.9rem;
   transition: 0.4s;
 
   position: relative;
@@ -199,24 +207,27 @@ main {
 }
 
 .scroll-header {
-  box-shadow: 0 0 5px hsla(152, 8%, 5%, 0.5);
+  background-color: var(--body-color);
+  box-shadow: 0 0 2px hsl(152, 8%, 10%);
+  border-radius: 0 0 1rem 1rem;
 }
 
 /* @@@@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@@ */
 
 .home__container {
-  height: 100vh;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+
+  padding-top: 12rem;
+  padding-bottom: 5rem;
 }
 
 .home__title {
-  font-size: 3.3rem;
+  font-size: 3.2rem;
   margin-bottom: var(--mb-1);
-  line-height: 120%;
+  line-height: 1.2;
 }
 
 .home__description {
@@ -225,13 +236,14 @@ main {
 }
 
 .home__img {
+  position: relative;
   padding-right: 5rem;
   display: flex;
 }
 
 .home__social {
   position: absolute;
-  right: -6rem;
+  right: -5.5rem;
   top: 50%;
 
   display: flex;
@@ -256,7 +268,7 @@ main {
   display: flex;
   color: var(--first-color);
   font-size: 1.2rem;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .home__social-link:hover {
@@ -264,6 +276,7 @@ main {
 }
 
 /* @@@@@@@@@@@@@@@@@ about @@@@@@@@@@@@@@@@ */
+
 .about__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -307,7 +320,7 @@ main {
   background-color: transparent;
   color: var(--first-color);
   padding: 0;
-  border-radius: unset;
+  border-radius: initial;
 }
 
 .about .btn:hover {
@@ -319,13 +332,13 @@ main {
 .steps .container {
   background-color: var(--container-color-light);
   border-radius: 1rem;
-  padding: 4rem 2rem 3rem 2rem;
+  padding: 4rem 2rem 3rem;
 }
 
 .steps__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .steps__card {
@@ -358,6 +371,7 @@ main {
 }
 
 /* @@@@@@@@@@@@@@@@@ products @@@@@@@@@@@@@@@@ */
+
 .products__description {
   text-align: center;
   width: 50%;
@@ -373,23 +387,28 @@ main {
 }
 
 .products__card {
-  position: relative;
   display: grid;
+  position: relative;
 }
 
 .products__card:hover .products__img {
   transform: translateY(-10px);
 }
 
+.products__images {
+  position: relative;
+  justify-self: center;
+}
+
 .products__circle {
   background-color: var(--container-color);
-  width: 100px;
+  width: 90px;
   height: 110px;
   border-radius: 50%;
 
   position: absolute;
-  top: 15%;
-  left: 15%;
+  top: 2rem;
+  left: 0;
   z-index: -1;
 }
 
@@ -397,7 +416,7 @@ main {
   width: 150px;
   justify-self: center;
   margin-bottom: var(--mb-1);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .products__price {
@@ -419,7 +438,7 @@ main {
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .products__button:hover {
@@ -427,6 +446,7 @@ main {
 }
 
 /* @@@@@@@@@@@@@@@@@ questions @@@@@@@@@@@@@@@@ */
+
 .questions {
   background-color: var(--container-color-light);
   margin: 2rem 0;
@@ -450,7 +470,6 @@ main {
 
 .questions__item {
   background-color: var(--container-color);
-  font-size: var(--small-font-size);
   padding: 1rem;
   cursor: pointer;
   transition: 0.4s;
@@ -459,6 +478,7 @@ main {
 }
 
 .questions__header {
+  font-size: var(--small-font-size);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -473,6 +493,7 @@ main {
 }
 
 .questions__description {
+  font-size: var(--tiny-font-size);
   padding-left: 1.7rem;
   color: var(--title-color);
   opacity: 0;
@@ -497,6 +518,7 @@ main {
 }
 
 /* @@@@@@@@@@@@@@@@@ contact @@@@@@@@@@@@@@@@ */
+
 .contact__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -549,17 +571,15 @@ main {
   height: 100%;
   padding: 1rem 1rem 1rem 0;
   background: none;
-
   color: var(--text-color);
 
-  border: none;
-  outline: none;
   z-index: 1;
 }
 
 .contact__label {
   position: absolute;
   top: 0.75rem;
+  left: 0;
   width: 100%;
   color: var(--text-color-light);
   transition: 0.3s;
@@ -569,16 +589,14 @@ main {
   height: 7rem;
 }
 
-.contact__area textarea {
+textarea {
   resize: none;
 }
 
 /*Input focus move up label*/
 .contact__input:focus + .contact__label {
   top: -0.75rem;
-  left: 0;
   font-size: var(--small-font-size);
-  z-index: 10;
 }
 
 /*Input focus sticky top label*/
@@ -586,10 +604,10 @@ main {
   + .contact__label {
   top: -0.75rem;
   font-size: var(--small-font-size);
-  z-index: 10;
 }
 
 /* @@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@@ */
+
 .footer__container {
   display: grid;
   grid-template-columns: repeat(4, max-content);
@@ -637,14 +655,12 @@ main {
 
 .footer__input {
   background-color: transparent;
-  border: none;
-  outline: none;
   padding-right: 0.7rem;
   color: var(--text-color);
 }
 
 .footer__form .btn {
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .footer__address {
@@ -689,7 +705,7 @@ main {
 .footer__copy {
   margin-top: 7rem;
   text-align: center;
-  font-size: var(--tiny-font-size);
+  font-size: 0.6rem;
 }
 
 .footer__copy a {
@@ -697,6 +713,7 @@ main {
 }
 
 /* @@@@@@@@@@@@@@@@@ scroll up @@@@@@@@@@@@@@@@ */
+
 .scrollup {
   background-color: var(--first-color);
   color: var(--title-color);
@@ -709,7 +726,7 @@ main {
 
   position: fixed;
   bottom: -30%;
-  right: 1rem;
+  right: 1.5rem;
 }
 
 .scrollup:hover {
@@ -718,4 +735,55 @@ main {
 
 .show-scrollup {
   bottom: 5rem;
+}
+
+/*@@@@@@@@@@@@@@@@@ scroll bar @@@@@@@@@@@@@@@@@*/
+
+::-webkit-scrollbar {
+  background-color: hsl(0, 0%, 50%);
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 35%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 25%);
+}
+
+/*@@@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  background: hsla(152, 8%, 12%, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.preloader__icon {
+  font-size: 6rem;
+  color: var(--first-color);
+  animation: preloader 3s infinite;
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
 }
