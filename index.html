@@ -27,6 +27,11 @@
     <title>plantex</title>
   </head>
   <body>
+    <!-- @@@@@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@@@@ -->
+    <div class="preloader" id="preloader">
+      <i class="bx bxs-leaf preloader__icon"></i>
+    </div>
+
     <!-- @@@@@@@@@@@@@@@@@@@ header @@@@@@@@@@@@@@@@@@@@ -->
     <header class="header" id="header">
       <div class="container">
@@ -76,7 +81,7 @@
               </h1>
               <p class="home__description">
                 Create incredible plant design for your offices or apastaments.
-                Add fresness to your new ideas.
+                Add freshness to your new ideas.
               </p>
               <a href="#" class="btn"
                 >Explore <i class="bx bx-right-arrow-alt"></i
@@ -85,20 +90,29 @@
 
             <div class="home__img">
               <img src="./assets/img/home.png" alt="" />
-            </div>
 
-            <div class="home__social">
-              <span class="home__social-follow">Follow Us</span>
-              <div class="home__social-line"></div>
-              <a href="#" class="home__social-link"
-                ><i class="bx bxl-whatsapp"></i
-              ></a>
-              <a href="#" class="home__social-link"
-                ><i class="bx bxl-twitter"></i
-              ></a>
-              <a href="#" class="home__social-link"
-                ><i class="bx bxl-instagram"></i
-              ></a>
+              <div class="home__social">
+                <span class="home__social-follow">Follow Us</span>
+                <div class="home__social-line"></div>
+                <a
+                  href="https://web.whatsapp.com/"
+                  target="_blank"
+                  class="home__social-link"
+                  ><i class="bx bxl-whatsapp"></i
+                ></a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="home__social-link"
+                  ><i class="bx bxl-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="home__social-link"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
@@ -196,12 +210,15 @@
 
           <div class="products__container">
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product1.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product1.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Cacti Plant</h3>
               <span class="products__price">$19.99</span>
               <button class="products__button">
@@ -209,12 +226,15 @@
               </button>
             </div>
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product2.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product2.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Cactus Plant</h3>
               <span class="products__price">$11.99</span>
               <button class="products__button">
@@ -222,12 +242,15 @@
               </button>
             </div>
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product3.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product3.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Aloe Vera Plant</h3>
               <span class="products__price">$7.99</span>
               <button class="products__button">
@@ -235,12 +258,15 @@
               </button>
             </div>
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product4.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product4.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Succulent Plant</h3>
               <span class="products__price">$5.99</span>
               <button class="products__button">
@@ -248,12 +274,15 @@
               </button>
             </div>
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product5.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product5.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Succulent Plant</h3>
               <span class="products__price">$10.99</span>
               <button class="products__button">
@@ -261,12 +290,15 @@
               </button>
             </div>
             <div class="products__card">
-              <div class="products__circle"></div>
-              <img
-                src="./assets/img/product6.png"
-                alt=""
-                class="products__img"
-              />
+              <div class="products__images">
+                <div class="products__circle"></div>
+                <img
+                  src="./assets/img/product6.png"
+                  alt=""
+                  class="products__img"
+                />
+              </div>
+
               <h3 class="products__title">Green Plant</h3>
               <span class="products__price">$8.99</span>
               <button class="products__button">
@@ -474,13 +506,24 @@
             <a href="tel:+999888777" class="footer__tel">+999 888 777</a>
 
             <div class="footer__social">
-              <a href="#" class="footer__social-icon">
+              <a
+                href="https://web.whatsapp.com/"
+                target="_blank"
+                class="footer__social-icon"
+              >
                 <i class="bx bxl-whatsapp"></i
               ></a>
-              <a href="#" class="footer__social-icon"
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="footer__social-icon"
                 ><i class="bx bxl-twitter"></i
               ></a>
-              <a href="#" class="footer__social-icon">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="footer__social-icon"
+              >
                 <i class="bx bxl-instagram"></i
               ></a>
             </div>
@@ -503,8 +546,10 @@
 
         <p class="footer__copy">
           © 2022 coded by
-          <a href="https://github.com/soroushmdn">Soroush Karimi.</a> <br />
-          design from Bedimcode youtube channel.
+          <a href="https://github.com/soroushmdn" target="_blank"
+            >Soroush Karimi.</a
+          >
+          Design from Bedimcode.
         </p>
       </div>
     </footer>
