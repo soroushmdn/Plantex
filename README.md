@@ -1,5 +1,5 @@
 # 🎍 Plantex
-- Responsive Plant Landing page Design Using HTML CSS &amp; JavaScript.
+- Responsive Plants Landing page Design Using HTML CSS &amp; JavaScript.
 - Contains animations when scrolling.
 - Contains minimalist Preloader animation.
 - Developed first for Desktop then for Mobile devices.
